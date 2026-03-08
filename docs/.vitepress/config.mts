@@ -3,6 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Pyside6 GUI 教程",
+  base: '/python-gui-pyside6/',
   description: "Pyside6",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
