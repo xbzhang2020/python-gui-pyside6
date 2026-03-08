@@ -8,17 +8,17 @@ hero:
   tagline: ""
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 快速上手
+      link: /guide/getting-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Github
+      link: https://github.com/xbzhang2020/python-gui-pyside6
 
 features:
-  - title: Feature A
+  - title: 简单易学
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 系统化
+    details: 从0到1，带你系统学习 GUI 编程，构建 GUI 框架
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---

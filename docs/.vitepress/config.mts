@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Pyside6 教程",
+  title: "Pyside6 GUI 教程",
   description: "Pyside6",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '指南', link: '/guide/getting-started' },
+      // { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: [
