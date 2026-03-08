@@ -19,6 +19,7 @@ export default defineConfig({
           { text: '信号与插槽', link: '/guide/signals-and-slots' },
           { text: '布局', link: '/guide/layout' },
           { text: '样式', link: '/guide/styling' },
+          { text: '模型与视图', link: '/guide/model-and-view' },
         ]
       },
       {
@@ -32,6 +33,7 @@ export default defineConfig({
           { text: 'List', link: '/widgets/list' },
           { text: 'Table', link: '/widgets/table' },
           { text: 'Tree', link: '/widgets/tree' },
+          { text: 'MainWindow', link: '/widgets/main-window' },
         ]
       }
     ],

@@ -1,5 +1,16 @@
 # 快速上手
 
+## 基础概念
+
+Qt 是一个跨平台的C++应用程序开发框架，广泛用于桌面软件开发，支持 Windows、Linux、MacOS 等。
+
+PySide6 是 Qt 官方推出的 Python 绑定库，允许你使用 Python 开发用户界面，但它底层还是调用了 Qt 的 API。
+
+Qt 中提供了两种创建 UI 的方式。
+
+- 命令式编程：使用 Qt Widgets，它是 Qt 中的一组内置组件。
+- 声明式编程：Qt Quick QML 提供了一种声明式的方式创建 UI，类似 CSS 和 JSON。此外，还可以使用 JavaScript 来增强用户体验。
+
 ## 安装
 
 安装：
@@ -58,6 +69,10 @@ from PySide6.QtWidgets import QApplication
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    
+
     sys.exit(app.exec())
 ```
+
+## 参考资料
+
+https://doc.qt.io/qtforpython-6/
