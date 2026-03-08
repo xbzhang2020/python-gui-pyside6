@@ -13,16 +13,22 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '常用组件',
+        // collapsed: true,
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Label', link: '/widgets/label' },
+          { text: 'Button', link: '/widgets/button' },
+          { text: 'LineEdit', link: '/widgets/input' },
+          { text: 'Slider', link: '/widgets/slider' },
+          { text: 'List', link: '/widgets/list' },
+          { text: 'Table', link: '/widgets/table' },
+          { text: 'Tree', link: '/widgets/tree' },
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/xbzhang2020/python-gui-pyside6' }
     ]
   }
 })
