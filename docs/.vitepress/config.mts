@@ -13,6 +13,15 @@ export default defineConfig({
 
     sidebar: [
       {
+        text: '指南',
+        items: [
+          { text: '快速上手', link: '/guide/getting-started' },
+          { text: '信号与插槽', link: '/guide/signals-and-slots' },
+          { text: '布局', link: '/guide/layout' },
+          { text: '样式', link: '/guide/styling' },
+        ]
+      },
+      {
         text: '常用组件',
         // collapsed: true,
         items: [
