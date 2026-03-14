@@ -2,11 +2,20 @@
 
 ## 概述
 
-[QLabel](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html#PySide6.QtWidgets.QLabel) 用于显示文本（可以是纯文本或富文本）和图片。
+[QLabel](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html#PySide6.QtWidgets.QLabel) 控件主要用于显示文本、图片等信息内容。
 
 ![](https://doc.qt.io/qtforpython-6/_images/fusion-label.png)
 
-## 展示文本
+常用方法如下：
+
+- [setText()](#text)
+- [setPixmap()](#image)
+- [setAlignment()](#alignment)
+- text()
+
+## 展示文本 {#text}
+
+展示文本内容。
 
 ```python
 from PySide6.QtWidgets import QApplication, QLabel
@@ -21,8 +30,17 @@ if __name__ == "__main__":
     sys.exit(app.exec())
 ```
 
-## 展示图片
+使用 `setText()` 可以动态设置标签的展示文本。
 
+```python
+label = QLabel()
+label.setText("Hello World")
+```
+
+## 展示图片 {#image}
+
+
+使用 `setPixmap()` 可以展示一张图片，它接收一个 QPixmap 对象。
 
 ```python
 from PySide6.QtWidgets import QApplication, QLabel
@@ -47,33 +65,14 @@ if __name__ == "__main__":
     sys.exit(app.exec())
 ```
 
+## 对齐方式 {#alignment}
 
-## 展示富文本
+使用 `setAlignment()` 方法可以设置标签控件中内容的对齐方式。
 
-
-```python
-import sys
-from PySide6.QtWidgets import QApplication, QLabel
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-
-    label = QLabel("<h1 style='color: red;'>Hello World!</h1>")
-    label.show()
-
-    sys.exit(app.exec())
-```
-
-
-## 设置和获取内容
-
-## 对齐
-
-对齐包括水平方向和垂直方向。
-
-
-设置文本居中的示例：
+实例：居中标签中的文本内容。
 
 ```python
+from PySide6.QtCore import Qt
+
 label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 ```
