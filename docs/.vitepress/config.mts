@@ -21,6 +21,7 @@ export default defineConfig({
           { text: "布局", link: "/guide/layout" },
           { text: "样式", link: "/guide/styling" },
           { text: "模型与视图", link: "/guide/model-and-view" },
+          // { text: "组件化", link: "/guide/components" },
         ],
       },
       {
