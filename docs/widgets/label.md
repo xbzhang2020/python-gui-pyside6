@@ -1,7 +1,5 @@
 # Label 组件
 
-## 概述
-
 [QLabel](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html#PySide6.QtWidgets.QLabel) 控件主要用于显示文本、图片等信息内容。
 
 ![](https://doc.qt.io/qtforpython-6/_images/fusion-label.png)

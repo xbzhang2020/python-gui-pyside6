@@ -1,8 +1,13 @@
-# Button
+# Button 组件
 
-## 概述
+Button 组件主要用于用户与界面的交互，当用户按下按钮时会触发相应的行为动作。Qt 中这种触发信号响应动作的机制称为信号（Singals）和槽（Slots）。
 
-PySide6 中的 Signals 和 Slots 机制，实现了组件和组件、组件和外部代码之间的通信。这种机制类似 JS 中的 event 和 event callback。以按钮为例，按钮提供了一个预定义的 clicked 信号，当按钮被点击时会触发对应的 slot 函数。
+Qt 中提供了多种类型的按钮控件，最常用的是 QPushButton 按钮。
+
+- QAbstractButton 是所有按钮的基类，提供通用功能。
+- QPushButton 是标准按钮，主要用于操作；
+- QToolButton 是工具按钮，主要用于工具栏按钮。
+
 
 使用示例：
 
@@ -13,7 +18,6 @@ from PySide6.QtWidgets import (
     QApplication,
     QPushButton,
 )
-
 
 @Slot()
 def say_hello(self):
@@ -30,8 +34,3 @@ if __name__ == "__main__":
     sys.exit(app.exec())
 ```
 
-Qt 中提供了多种类型的按钮组件，其中：
-
-- QAbstractButton 是所有按钮的基类，提供通用功能。
-- QPushButton 是标准按钮，主要用于操作；
-- QToolButton 是工具按钮，主要用于工具栏按钮等。
