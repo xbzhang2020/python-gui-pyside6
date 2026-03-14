@@ -15,6 +15,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     button = QPushButton("Click me")
+    button.setFixedSize(100, 36)
     button.clicked.connect(say_hello)
     button.show()
 
