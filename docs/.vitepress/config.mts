@@ -42,6 +42,7 @@ export default defineConfig({
           { text: "Dialog", link: "/widgets/dialog" },
           { text: "ProgressBar", link: "/widgets/progressbar" },
           { text: "Splitter", link: "/widgets/splitter" },
+          { text: "TabBar", link: "/widgets/tabbar" },
           { text: "MessageBox", link: "/widgets/messagebox" },
           { text: "MainWindow", link: "/widgets/main-window" },
         ],
