@@ -1,18 +1,5 @@
-# List 列表控件
-
-Qt 中提供了两种创建列表的方式。
-
-- [QListWidget](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QListWidget.html#PySide6.QtWidgets.QListWidget)：创建一个列表。
-- [QListView](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QListView.html#PySide6.QtWidgets.QListView)：使用模型&视图分离的方式创建列表。
-
-![](https://doc.qt.io/qtforpython-6/_images/fusion-listview.png)
-
-
-## 基本使用 {#basic}
-
-```python
 import sys
-from PySide6.QtWidgets import QApplication, QListWidget
+from PySide6.QtWidgets import QApplication, QListWidget, QListView, QStandardItemModel
 
 data = [
     {"name": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925},
@@ -30,8 +17,3 @@ if __name__ == "__main__":
 
     list_widget.show()
     sys.exit(app.exec())
-```
-
-## 列表视图
-
-

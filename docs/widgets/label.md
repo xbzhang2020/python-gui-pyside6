@@ -1,4 +1,4 @@
-# Label 控件
+# Label 标签控件
 
 [QLabel](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html#PySide6.QtWidgets.QLabel) 控件主要用于显示纯文本、富文本、图片等信息内容。
 

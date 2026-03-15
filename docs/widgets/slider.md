@@ -2,8 +2,6 @@
 
 [QSlider](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QSlider.html) 允许用户通过拖动滑块来选择一个值。典型的应用场景有音量控制、亮度控制等。
 
-示意图：
-
 ![](https://doc.qt.io/qtforpython-6/_images/fusion-slider.png)
 
 使用示例：

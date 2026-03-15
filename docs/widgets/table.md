@@ -1,4 +1,13 @@
-# Table
+# Table 表格控件
+
+Qt 提供了两种创建表格的方式。
+
+- [QTabWidget](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QTabWidget.html#PySide6.QtWidgets.QTabWidget)
+- [QTableView](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QTableView.html#PySide6.QtWidgets.QTableView)
+
+![](https://doc.qt.io/qtforpython-6/_images/fusion-tableview.png)
+
+## 基本使用
 
 Qt 中可以使用 QTableWidget 渲染表格，在渲染时需要指定表格的行和列的个数，然后使用 QTableWidgetItem 渲染每一个单元格。
 
@@ -35,3 +44,5 @@ if __name__ == "__main__":
 
     sys.exit(app.exec())
 ```
+
+## 表格视图
