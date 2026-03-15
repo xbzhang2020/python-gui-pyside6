@@ -31,7 +31,7 @@ export default defineConfig({
         items: [
           { text: "Label", link: "/widgets/label" },
           { text: "Button", link: "/widgets/button" },
-          { text: "LineEdit", link: "/widgets/input" },
+          { text: "TextEdit", link: "/widgets/textedit" },
           { text: "ComboBox", link: "/widgets/combobox" },
           { text: "Slider", link: "/widgets/slider" },
           { text: "List", link: "/widgets/list" },

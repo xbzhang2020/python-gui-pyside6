@@ -1,6 +1,6 @@
 # Label 控件
 
-[QLabel](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html#PySide6.QtWidgets.QLabel) 控件主要用于显示文本、图片等信息内容。
+[QLabel](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QLabel.html#PySide6.QtWidgets.QLabel) 控件主要用于显示纯文本、富文本、图片等信息内容。
 
 ![](https://doc.qt.io/qtforpython-6/_images/fusion-label.png)
 
@@ -33,6 +33,13 @@ if __name__ == "__main__":
 ```python
 label = QLabel()
 label.setText("Hello World")
+
+```
+
+## 展示富文本 {#html}
+
+```python
+label = QLabel("<h1>Hello World</1>")
 ```
 
 ## 展示图片 {#image}
