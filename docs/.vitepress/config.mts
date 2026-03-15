@@ -27,7 +27,7 @@ export default defineConfig({
       },
       {
         text: "常用控件",
-        collapsed: true,
+        collapsed: false,
         items: [
           { text: "Label", link: "/widgets/label" },
           { text: "Button", link: "/widgets/button" },
