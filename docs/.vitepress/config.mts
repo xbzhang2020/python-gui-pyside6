@@ -15,6 +15,7 @@ export default defineConfig({
     sidebar: [
       {
         text: "指南",
+        collapsed: false,
         items: [
           { text: "快速上手", link: "/guide/getting-started" },
           { text: "信号与插槽", link: "/guide/signals-and-slots" },
@@ -26,7 +27,7 @@ export default defineConfig({
       },
       {
         text: "常用控件",
-        // collapsed: true,
+        collapsed: true,
         items: [
           { text: "Label", link: "/widgets/label" },
           { text: "Button", link: "/widgets/button" },
