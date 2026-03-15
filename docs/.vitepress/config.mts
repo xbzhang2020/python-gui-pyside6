@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Pyside6 GUI 教程",
-  base: '/python-gui-pyside6/',
+  base: "/python-gui-pyside6/",
   description: "Pyside6",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -19,22 +19,30 @@ export default defineConfig({
           { text: "快速上手", link: "/guide/getting-started" },
           { text: "信号与插槽", link: "/guide/signals-and-slots" },
           { text: "布局", link: "/guide/layout" },
+          { text: "组件化", link: "/guide/widgets" },
           { text: "样式", link: "/guide/styling" },
           { text: "模型与视图", link: "/guide/model-and-view" },
-          // { text: "组件化", link: "/guide/components" },
         ],
       },
       {
-        text: "常用组件",
+        text: "常用控件",
         // collapsed: true,
         items: [
           { text: "Label", link: "/widgets/label" },
           { text: "Button", link: "/widgets/button" },
           { text: "LineEdit", link: "/widgets/input" },
+          { text: "ComboBox", link: "/widgets/combobox" },
           { text: "Slider", link: "/widgets/slider" },
           { text: "List", link: "/widgets/list" },
           { text: "Table", link: "/widgets/table" },
           { text: "Tree", link: "/widgets/tree" },
+          { text: "Menu", link: "/widgets/menu" },
+          { text: "Frame", link: "/widgets/frame" },
+          { text: "ScrollArea", link: "/widgets/scrollarea" },
+          { text: "Dialog", link: "/widgets/dialog" },
+          { text: "ProgressBar", link: "/widgets/progressbar" },
+          { text: "Splitter", link: "/widgets/splitter" },
+          { text: "MessageBox", link: "/widgets/messagebox" },
           { text: "MainWindow", link: "/widgets/main-window" },
         ],
       },
