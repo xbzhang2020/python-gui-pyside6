@@ -1,6 +1,6 @@
 # Button 控件
 
-Button 组件主要用于用户与界面的交互，当用户按下按钮时会触发相应的行为动作。Qt 中这种触发信号响应动作的机制称为信号（Singals）和槽（Slots）。
+Button 控件主要用于用户与界面的交互，当用户按下按钮时会触发相应的行为动作。Qt 中这种触发信号响应动作的机制称为信号（Singals）和槽（Slots）。
 
 Qt 中提供了多种类型的按钮控件，包括：
 
@@ -10,8 +10,13 @@ Qt 中提供了多种类型的按钮控件，包括：
 - [QToolButton](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QToolButton.html#PySide6.QtWidgets.QToolButton)：工具按钮，主要是在工具栏中使用。
 - [QRadioButton](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QRadioButton.html#PySide6.QtWidgets.QRadioButton)：单选按钮，用于在多个选项中选中一个按钮。
 - [QCheckbox](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QCheckBox.html#PySide6.QtWidgets.QCheckBox)：多选框，支持选中多个选项。
+- [QButtonGroup](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QButtonGroup.html#PySide6.QtWidgets.QButtonGroup)：按钮组，是一个管理按钮控件状态的容器。
 
 ## 简单按钮
+
+**QPushButton** 控件用于创建一个简单按钮。
+
+![](https://doc.qt.io/qtforpython-6/_images/fusion-pushbutton.png)
 
 ```python
 import sys
@@ -19,7 +24,10 @@ from PySide6.QtCore import Slot
 from PySide6.QtWidgets import (
     QApplication,
     QPushButton,
+    QHBoxLayout,
+    QWidget,
 )
+
 
 @Slot()
 def say_hello(self):
@@ -29,9 +37,15 @@ def say_hello(self):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    button = QPushButton("Click me")
-    button.clicked.connect(say_hello)
-    button.show()
+    window = QWidget()
+    layout = QHBoxLayout()
+
+    push_button = QPushButton("Click me")
+    push_button.clicked.connect(say_hello)
+    layout.addWidget(push_button)
+
+    window.setLayout(layout)
+    window.show()
 
     sys.exit(app.exec())
 ```
@@ -41,8 +55,57 @@ if __name__ == "__main__":
 
 ## 单选按钮
 
+**QRadioButton** 控件用于创建一个单选按钮。多个单选按钮放入同一个 **QButtonGroup** 后，可以实现选项互斥，同一时刻只能选中一项。
+
+![](https://doc.qt.io/qtforpython-6/_images/fusion-radiobutton.png)
+
+```python
+import sys
+from PySide6.QtWidgets import (
+    QApplication,
+    QButtonGroup,
+    QRadioButton,
+    QVBoxLayout,
+    QWidget,
+)
+
+def on_radio_toggled(button):
+    if button.isChecked():
+        print(f"Selected: {button.text()}")
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = QWidget()
+    layout = QVBoxLayout()
+
+    radio_group = QButtonGroup(window)  # 同组内互斥
+    for i, text in enumerate(["Option1", "Option2"]):
+        rb = QRadioButton(text)
+        if i == 0:
+            rb.setChecked(True)  # 默认选中第一项
+        radio_group.addButton(rb)
+        rb.toggled.connect(lambda: on_radio_toggled(rb))
+        layout.addWidget(rb)
+
+    window.setLayout(layout)
+    window.show()
+    sys.exit(app.exec())
+```
+
+- 使用 **QButtonGroup** 将多个 `QRadioButton` 归为一组，实现互斥选择。
+- 通过 **toggled** 信号在用户切换选项时执行逻辑。
+- 需要获取当前选中的按钮时，使用 `radio_group.checkedButton()`。
+
 ## 多选框
 
-## 菜单按钮
+![](https://doc.qt.io/qtforpython-6/_images/checkboxes-exclusive.png)
+
+## 链接按钮
+
+## 下拉菜单
+
+![](https://doc.qt.io/qtforpython-6/_images/fusion-pushbutton-menu.png)
 
 ## 工具按钮
+
+![](https://doc.qt.io/qtforpython-6/_images/assistant-toolbar.png)
